@@ -75,13 +75,13 @@ function App() {
       <div style={styles.feedbackCard}>
         <h3 style={styles.heading}>All Feedbacks</h3>
         {feedbacks.length === 0 ? (
-          <p style={{ color: "#777" }}>No feedback yet. Be the first!</p>
+          <p style={{ color: "#ccc" }}>No feedback yet. Be the first!</p>
         ) : (
           <ul style={styles.feedbackList}>
             {feedbacks.map((f, i) => (
               <li key={i} style={styles.feedbackItem}>
-                <b style={{ color: "#333" }}>{f.name}</b>
-                <p style={{ margin: "5px 0", color: "#555" }}>{f.message}</p>
+                <b style={{ color: "#fff" }}>{f.name}</b>
+                <p style={{ margin: "5px 0", color: "#ddd" }}>{f.message}</p>
               </li>
             ))}
           </ul>
@@ -95,7 +95,7 @@ const styles = {
   container: {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     padding: "20px",
-    backgroundColor: "#f4f6f8",
+    background: "linear-gradient(to bottom, #0d1b2a, #1b263b)",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
@@ -103,24 +103,26 @@ const styles = {
     gap: "20px",
   },
   formCard: {
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(255, 255, 255, 0.05)",
     padding: "20px",
     borderRadius: "10px",
-    boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.4)",
     width: "100%",
     maxWidth: "400px",
+    backdropFilter: "blur(5px)",
   },
   feedbackCard: {
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(255, 255, 255, 0.05)",
     padding: "20px",
     borderRadius: "10px",
-    boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.4)",
     width: "100%",
     maxWidth: "600px",
+    backdropFilter: "blur(5px)",
   },
   heading: {
     marginBottom: "15px",
-    color: "#333",
+    color: "#ffffff",
     textAlign: "center",
   },
   form: {
@@ -130,13 +132,16 @@ const styles = {
   },
   input: {
     padding: "10px",
-    border: "1px solid #ccc",
+    border: "1px solid rgba(255,255,255,0.2)",
     borderRadius: "5px",
     fontSize: "14px",
+    backgroundColor: "rgba(255,255,255,0.1)",
+    color: "#fff",
+    outline: "none",
   },
   button: {
     padding: "10px",
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#1f6feb",
     color: "white",
     border: "none",
     borderRadius: "5px",
@@ -150,11 +155,11 @@ const styles = {
     margin: 0,
   },
   feedbackItem: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "rgba(255,255,255,0.05)",
     padding: "10px",
     borderRadius: "5px",
     marginBottom: "10px",
-    border: "1px solid #eee",
+    border: "1px solid rgba(255,255,255,0.1)",
   },
 };
 
